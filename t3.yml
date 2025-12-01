@@ -1,0 +1,20 @@
+---
+- name: Install tmocat9 ( replace & service )
+  hosts: myserver
+  tasks:
+    - name: Install tomcat9
+      apt:
+        name: tomcat10
+        state: present
+        update_cache: yes
+    - name: change the port
+      replace:
+        regexp: 8080
+        replace: 9090
+        path: /etc/tomcat10/server.xml
+    - name: restart the tomcat9
+      service:
+        name: tomcat10
+        state: restarted
+...
+    
