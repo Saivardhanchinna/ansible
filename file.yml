@@ -1,0 +1,9 @@
+---
+- name: create file
+  hosts: myserver
+  tasks:
+    - name: create file 
+      file:
+        name: file.txt
+        state: touch
+...

@@ -1,0 +1,11 @@
+---
+- name: copy the path one server to other server
+  hosts: myserver
+  tasks:
+    - name: edit the path
+      copy:
+        src: /home/ubuntu/demo1/file.txt
+        dest: /home/ubuntu/task1
+        mode: "746"
+... 
+

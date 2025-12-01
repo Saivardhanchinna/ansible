@@ -1,0 +1,11 @@
+--- 
+- name: using apt module
+  hosts: myserver
+  tasks:
+    - name: install tree
+      apt:
+        name: tree
+        state: present
+        update_cache: yes
+...
+
